@@ -8,8 +8,7 @@ const sequelize = new Sequelize({
 
 const User = sequelize.define('User', {
   id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
+    type: DataTypes.UUID,
     primaryKey: true
   },
   username: {
@@ -38,7 +37,8 @@ const User = sequelize.define('User', {
   },
   PhoneNo: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false , 
+    unique: true
   },
   createdAt: {
     type: DataTypes.DATE,
