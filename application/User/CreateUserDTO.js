@@ -1,11 +1,11 @@
 function validateCreateUser(rawData) {
   const { username, name, family, email, password, PhoneNo } = rawData;
 
-  if (!username || !name || !family || !email || !password || !PhoneNo) {
+  if (!username || !email || !password || !PhoneNo) {
     return {
       isValid: false,
       statusCode: 400,
-      error: "All fields (username, name, family, email, password, PhoneNo) are required."
+      error: "All fields (username, email, password, PhoneNo) are required."
     };
   }
 
