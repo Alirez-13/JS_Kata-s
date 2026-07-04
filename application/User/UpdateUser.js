@@ -1,7 +1,7 @@
 const { User } = require('../../models/User');
 const UpdateUserDTO = require('./UpdateUserDTO');
 
-async function updateUserExecute(targetUsername, rawData) {
+async function executeUpdateUser(targetUsername, rawData) {
   try {
     const dtoResult = UpdateUserDTO.validateUserUpdate(rawData);
     if (!dtoResult.isValid) {
@@ -29,4 +29,4 @@ async function updateUserExecute(targetUsername, rawData) {
   }
 }
 
-module.exports = { updateUserExecute };
+module.exports = { executeUpdateUser };

@@ -2,7 +2,7 @@ const { User } = require('../../models/User')
 const CreateUserDTO = require('./CreateUserDTO')
 const crypto = require('crypto')
 
-async function createUser(rawData) {
+async function executeCreateUser(rawData) {
   try {
     
     const dtoResult = CreateUserDTO.validateCreateUser(rawData)
@@ -47,4 +47,4 @@ async function createUser(rawData) {
   }
 }
 
-module.exports = { createUser };
+module.exports = { executeCreateUser };
